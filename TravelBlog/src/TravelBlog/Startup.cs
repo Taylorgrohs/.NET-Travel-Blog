@@ -44,10 +44,7 @@ namespace TravelBlog
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+           
         }
 
         public static void Main(string[] args) => WebApplication.Run<Startup>(args);
