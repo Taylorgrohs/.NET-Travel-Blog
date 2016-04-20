@@ -57,5 +57,11 @@ namespace TravelBlog.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }      
+
+        public IActionResult LocationExperience(int id)
+        {
+            var LocationExperiences = db.Experiences.Where(x => x.LocationId == id).ToList();
+            return View(LocationExperiences);
+        }
     }
 }

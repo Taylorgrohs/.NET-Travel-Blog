@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Travel Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IDictionary<TravelBlog.Models.Person, TravelBlog.Models.Experience>
+
+<h2>Person Page</h2>
+
+<h3>People met at x</h3>
+
+@foreach (var person in Model)
+{
+    <p> @Html.DisplayFor(modelPerson => person.Name)</p>
+    <p>@Html.DisplayFor(modelExperience => person.experiences.Descripton)</p>
+    
+}
