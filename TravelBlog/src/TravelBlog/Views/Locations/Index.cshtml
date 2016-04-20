@@ -10,6 +10,7 @@
 {
     <p>@Html.DisplayFor(modelLocation => location.Name) | @Html.ActionLink("Edit", "Edit", new { id = location.LocationId }) | @Html.ActionLink("Delete", "Delete", new { id = location.LocationId })</p>
     <p>@Html.ActionLink("EXPERIENCES", "LocationExperience", new { id = location.LocationId })</p>
+    <p>@Html.ActionLink("PEOPLE MET", "LocationPeople", new { id = location.LocationId })</p>
 }
 
 <p>@Html.ActionLink("HOME", "Index", "Home")</p>

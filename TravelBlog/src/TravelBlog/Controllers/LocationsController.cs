@@ -63,5 +63,11 @@ namespace TravelBlog.Controllers
             var LocationExperiences = db.Experiences.Where(x => x.LocationId == id).ToList();
             return View(LocationExperiences);
         }
+
+        public IActionResult LocationPeople(int id)
+        {
+            var LocationPersons = db.Persons.Where(x => x.LocationId == id).Include(x => x.experience).ToList();
+            return View(LocationPersons);
+        }
     }
 }
