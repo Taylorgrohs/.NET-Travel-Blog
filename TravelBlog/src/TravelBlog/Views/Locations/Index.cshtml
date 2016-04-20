@@ -5,13 +5,13 @@
 }
 
 <h1>Locations</h1>
-
+<p>@Html.ActionLink("ADD NEW LOCATION", "Create")</p>
+<hr />
 @foreach(var location in Model)
 {
     <p>@Html.DisplayFor(modelLocation => location.Name) | @Html.ActionLink("Edit", "Edit", new { id = location.LocationId }) | @Html.ActionLink("Delete", "Delete", new { id = location.LocationId })</p>
-    <p>@Html.ActionLink("EXPERIENCES", "LocationExperience", new { id = location.LocationId })</p>
-    <p>@Html.ActionLink("PEOPLE MET", "LocationPeople", new { id = location.LocationId })</p>
+    <p>@Html.ActionLink("DETAILS", "LocationPeople", new { id = location.LocationId })</p>
 }
 
+<hr />
 <p>@Html.ActionLink("HOME", "Index", "Home")</p>
-<p>@Html.ActionLink("ADD NEW LOCATION", "Create")</p>
