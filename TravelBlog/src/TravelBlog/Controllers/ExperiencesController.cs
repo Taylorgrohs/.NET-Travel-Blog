@@ -30,7 +30,7 @@ namespace TravelBlog.Controllers
         {
             db.Experiences.Add(experience);
             db.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Create", "Persons");
         }
     }
 }
