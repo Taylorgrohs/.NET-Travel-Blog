@@ -16,7 +16,7 @@
     @Html.LabelFor(model => model.LocationId)
     @Html.DropDownList("LocationId")
 
-    <input type="submit" value="Create" />
+    <input class="button" type="submit" value="Create" />
 }
 
-@Html.ActionLink("Home", "Index", "Home")
+@Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn button" })

@@ -6,3 +6,11 @@
     width: 500px;
     height: 600px;
 }
+
+.button {
+    background-color: antiquewhite;
+    border-color: orangered;
+    color: orangered;
+    font-family: fantasy;
+    
+}

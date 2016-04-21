@@ -8,7 +8,7 @@ using TravelBlog.Models;
 namespace TravelBlog.Migrations
 {
     [DbContext(typeof(TravelBlogContext))]
-    [Migration("20160420165223_Initial")]
+    [Migration("20160421173733_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,6 +35,8 @@ namespace TravelBlog.Migrations
                 {
                     b.Property<int>("LocationId")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Image");
 
                     b.Property<string>("Name");
 

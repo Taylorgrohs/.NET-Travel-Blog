@@ -11,6 +11,7 @@
 {
     <p>@Html.DisplayFor(modelLocation => location.Name) | @Html.ActionLink("Edit", "Edit", new { id = location.LocationId }) | @Html.ActionLink("Delete", "Delete", new { id = location.LocationId })</p>
     <p>@Html.ActionLink("DETAILS", "LocationPeople", new { id = location.LocationId })</p>
+    <img src="@Html.DisplayFor(modelLocation => location.Image)"/>
 }
 
 <hr />

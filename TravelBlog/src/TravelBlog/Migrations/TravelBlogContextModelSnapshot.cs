@@ -35,6 +35,8 @@ namespace TravelBlog.Migrations
                     b.Property<int>("LocationId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Image");
+
                     b.Property<string>("Name");
 
                     b.HasKey("LocationId");
