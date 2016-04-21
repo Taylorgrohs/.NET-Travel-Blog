@@ -4,10 +4,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@model IEnumerable<TravelBlog.Models.Person>
-
+@model IList <TravelBlog.Models.Person>
+<h1>Experiences in @Html.DisplayFor(x => x[0].location.Name)</h1>
 @foreach (var person in Model)
 {
-  <h2>Experiences in @Html.DisplayFor(x => person.location.Name)</h2>
+
+  @*<h2>Experiences in @Html.DisplayFor(x => person.location.Name)</h2>*@
   <p>@Html.DisplayFor(x => person.experience.Description) with @Html.DisplayFor(x => person.Name)</p>
  }
+<p>@Html.ActionLink("New Experience", "Create", "Persons")</p>

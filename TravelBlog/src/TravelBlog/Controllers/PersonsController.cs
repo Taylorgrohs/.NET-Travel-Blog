@@ -18,13 +18,7 @@ namespace TravelBlog.Controllers
         // GET: /<controller>/
         public IActionResult Index(int id)
         {
-            Dictionary<string, object> myDictionary = new Dictionary<string, object>();
             
-            myDictionary.Add("Person", db.Persons.Where(x => x.LocationId == id).ToList());
-
-            myDictionary.Add("Experience", db.Experiences.Where(x => x.ExperienceId == id).ToList());
-
-            return View(myDictionary);
         }
 
     }
