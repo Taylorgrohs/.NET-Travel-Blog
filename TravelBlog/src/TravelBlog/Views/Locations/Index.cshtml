@@ -16,3 +16,7 @@
 
 <hr />
 <p>@Html.ActionLink("HOME", "Index", "Home")</p>
+
+<div>
+    @await Component.InvokeAsync("PersonView", 4, false);
+</div>

@@ -69,5 +69,10 @@ namespace TravelBlog.Controllers
             var LocationPersons = db.Persons.Where(x => x.LocationId == id).Include(x => x.experience).Include(x => x.location).ToList();
             return View(LocationPersons);
         }
+
+        public IActionResult LocationPeopleVC()
+        {
+            return ViewComponent("LocationPeople", 3, false);
+        }
     }
 }

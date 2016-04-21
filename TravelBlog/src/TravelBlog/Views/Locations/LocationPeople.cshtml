@@ -13,3 +13,7 @@
   <p>@Html.DisplayFor(x => person.experience.Description) with @Html.DisplayFor(x => person.Name)</p>
  }
 <p>@Html.ActionLink("New Experience", "Create", "Experiences")</p>
+
+<div>
+    @await Component.InvokeAsync("LocationPeople")
+</div>
